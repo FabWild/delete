@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(method='POST', action='/users/?_method=DELETE')
+    br
+    input(type="text" name="userid" placeholder="userid" value=2 size="50" maxlength="50")
+    br
+    button(type='submit') Supprimer
+  form(method='POST', action='/users/?_method=PUT')
+    br
+    input(type="text" name="username" placeholder="username" value=bob size="50" maxlength="50")
+    br
+    button(type='submit') Modifier
